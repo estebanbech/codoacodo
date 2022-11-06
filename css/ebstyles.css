@@ -1,0 +1,19 @@
+body {
+  background-color: #FDD306;
+}
+
+.bg-white{
+  background-color: #fff;
+}
+
+.text-justify{
+  text-align: justify !important;
+}
+
+.h7 {
+  font-size: .9em;
+}
+
+.mano{
+  cursor:pointer;
+}

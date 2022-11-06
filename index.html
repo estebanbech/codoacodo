@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codo a Codo | Tarea Obligatoria Unidad n°11</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/ebstyles.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-10 col-lg-6 col-md-8 col-sm-8 mx-auto bg-white">
+                <h1 class="h5 text-center mt-5">
+                    Tarea Obligatoria Unidad n°11
+                </h1>
+                <h2 class="text-center h3 mb-5">Esteban Bechelli | Comisión 22554</h2>
+                <p class="text-justify">La tarea establece que la entrega "deberás mandar captura de la base de datos con los registros insertados, además del back up en un archivo comprimido".</p>
+                <p class="text-justify">Dado que no hay manera de colocar dentro del "Diario" un archivo, como solicita la consigna para la entrega de la tarea, he colocado mis archivos en esta Web para que puedan descargarla:</p>
+                <p class="text-center mt-5">
+                    <a href="files/bechelli_com_22554.rar">Descargar Archivo Comprimido
+                    <br>
+                    <img src="img/descarga.png" class="col-1 mx-auto d-block" alt="Descargar Archivo Comprimido" width="57" height="57">
+                </a>
+                </p>
+
+
+                <p class="text-center mt-5">A continuación se presenta la imagen tomada de la Base de Datos:</p>
+                
+                <!-- Image trigger modal -->
+                <img src="img/bechelli_com_22554.png" class="col-12 rounded mano" alt="Imagen de la Base de Datos" data-bs-toggle="modal" data-bs-target="#imageModal" title="Ver Imagen">
+
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="imageModalLabel">Imagen de la Base de Datos</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+            <img src="img/bechelli_com_22554.png" class="col-12 rounded" alt="Imagen de la Base de Datos">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+                <p class="text-center mt-5">A continuación se presenta el SQL que la genera y completa con 5 registros la Base de Datos:</p>
+                <pre class="h7 mt-3 bg-dark text-light pt-3 px-3 text-justify">
+-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: localhost:3306
+-- Tiempo de generación: 06-11-2022 a las 15:46:56
+-- Versión del servidor: 8.0.31
+-- Versión de PHP: 8.1.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+03:00";
+
+--
+-- Base de datos: `bechelli_com_22554`
+--
+
+CREATE SCHEMA IF NOT EXISTS `bechelli_com_22554`;
+
+ALTER DATABASE `bechelli_com_22554` CHARACTER SET utf8mb4
+ COLLATE utf8mb4_general_ci;
+
+USE `bechelli_com_22554`;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `alumno`
+--
+
+CREATE TABLE `alumno` (
+`id` int NOT NULL,
+`nombre` varchar(40) NOT NULL,
+`apellido` varchar(40) NOT NULL,
+`edad` tinyint NOT NULL,
+`fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+`provincia` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+--
+-- Volcado de datos para la tabla `alumno`
+--
+
+INSERT INTO `alumno` (`id`, `nombre`, `apellido`, `edad`, `fecha`,
+ `provincia`) VALUES
+(1, 'Pablo', 'Pérez', 23, '2022-11-06 11:18:36', 'Córdoba'),
+(2, 'Miriam', 'Rodríguez', 25, '2022-11-06 11:18:36', 'San Luis'),
+(3, 'Santiago', 'López', 31, '2022-11-06 11:18:36', 'CABA'),
+(4, 'Ana María', 'Merlo', 51, '2022-11-06 11:18:36', 'Corrientes'),
+(5, 'Carlos', 'Junior', 36, '2022-11-06 11:20:44', 'Entre Ríos');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `alumno`
+--
+ALTER TABLE `alumno`
+ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `alumno`
+--
+ALTER TABLE `alumno`
+MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+COMMIT;
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
